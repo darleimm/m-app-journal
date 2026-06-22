@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3377体育 · 简明指南与访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f6f0;
+      font-family: 'Georgia', 'Noto Serif SC', serif;
+      color: #2c2b28;
+      line-height: 1.75;
+      padding: 2.5rem 1rem;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #fcfbf8;
+      border-radius: 36px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04);
+      padding: 3rem 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 2rem 1.2rem;
+        border-radius: 20px;
+      }
+      body {
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    /* Hero 区 — 带一点叙述感 */
+    .hero {
+      margin-bottom: 2.8rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e2ddd3;
+    }
+
+    .hero .tag {
+      display: inline-block;
+      background: #e4ddd0;
+      color: #3d3a33;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.9rem;
+      border-radius: 40px;
+      margin-bottom: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 450;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      color: #1f1e1b;
+    }
+
+    .hero h1 span {
+      background: #f0ebe0;
+      padding: 0 0.25rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #4e4b44;
+      max-width: 80%;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .hero p {
+        max-width: 100%;
+      }
+    }
+
+    /* 引用/提示框 — 沿用文章排版风格 */
+    .notice-box {
+      background: #f2efe8;
+      border-left: 5px solid #b5aa95;
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0 2.8rem 0;
+      border-radius: 0 20px 20px 0;
+      font-size: 0.98rem;
+      color: #3a3730;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .notice-box strong {
+      color: #2b2822;
+      font-weight: 600;
+    }
+
+    /* 通用段落 */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin: 2.2rem 0 1rem 0;
+      color: #22201c;
+    }
+
+    .section-sub {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #5f5a50;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #3f5c3a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #c3b9a8;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: #5f7d59;
+      text-decoration-color: #8f7f68;
+    }
+
+    /* 优势小卡片 — 保持克制间距 */
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem 0;
+    }
+
+    .advantage-item {
+      background: #f9f7f2;
+      padding: 1.6rem 1.2rem;
+      border-radius: 24px;
+      border: 1px solid #ece7de;
+      transition: background 0.2s;
+    }
+
+    .advantage-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #2d2a23;
+      border-bottom: 1px dashed #dbd2c4;
+      padding-bottom: 0.25rem;
+      display: inline-block;
+    }
+
+    .advantage-item p {
+      font-size: 0.95rem;
+      color: #4b473f;
+      margin-bottom: 0;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin: 2.8rem 0 2rem 0;
+    }
+
+    .faq-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e3ddd1;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 550;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      color: #1f1d18;
+    }
+
+    .faq-a {
+      color: #4e4a41;
+      font-size: 0.95rem;
+      padding-left: 0.5rem;
+    }
+
+    /* 底部链接区 */
+    .footer-links {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2ddd3;
+      font-size: 0.9rem;
+      color: #5b574c;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
+      align-items: baseline;
+    }
+
+    .footer-links a {
+      color: #4b5e4a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #bcb09b;
+    }
+
+    .footer-links a:hover {
+      color: #2d3d2b;
+    }
+
+    .footnote {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #7c766b;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e7e2d7;
+      margin: 2rem 0 1rem;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- Hero 区：叙述 + 简明定位 -->
+  <div class="hero">
+    <div class="tag">简明指南</div>
+    <h1>从一处锚点开始<br><span>3377体育</span> · 访问提醒</h1>
+    <p>整理几项实用信息，帮助你更顺畅地了解这个平台。不是教程，更像一份备忘。</p>
+  </div>
+
+  <!-- 提示框：访问相关的提醒 -->
+  <div class="notice-box">
+    <strong>🙌 访问前的小提醒</strong><br>
+    如果你正在寻找 <a href="https://index-3377sports.com">3377体育</a> 的当前入口，建议先确认网络环境是否通畅。部分浏览器或安全软件可能会拦截跳转，可尝试更换浏览器或关闭 VPN 的某些规则。<br>
+    另外，页面加载若偏慢，可稍等几秒——许多体育类站点会加载实时数据模块，首次打开需要缓存。
+  </div>
+
+  <!-- 一段介绍文字：自然叙述切入角度 -->
+  <p>
+    为什么会有这个页面？最初只是想把关于 <a href="https://index-3377sports.com">3377体育</a> 的一些零散观察和实用细节写下来，后来发现很多人问的问题其实很相似——比如页面打不开、注册时需要注意什么、有哪些功能值得先了解。于是干脆整理成一篇偏向指南式的介绍，没有夸大，只是把看到的、了解到的列出来。
+  </p>
+  <p>
+    以下内容适合两类人：第一次接触该站的新朋友，或者已经用过但想快速确认几个信息的老用户。如果你只是想直达站点，可以直接前往 <a href="https://index-3377sports.com">3377体育</a>，但建议读完下方提醒，能省不少时间。
+  </p>
+
+  <!-- 优势区：从平台特点里提炼出三个简明优势 -->
+  <div class="section-title">三个值得留意的特点</div>
+  <div class="advantages-grid">
+    <div class="advantage-item">
+      <h3>内容覆盖偏实战</h3>
+      <p>不是单纯的赛事列表，而是整合了比分、数据统计和一些战术分析类栏目，适合喜欢深入了解比赛的访客。</p>
+    </div>
+    <div class="advantage-item">
+      <h3>界面偏向工具化</h3>
+      <p>没有过多装饰和广告干扰，板块之间的层级比较清晰，找某一场比赛或历史数据时基本点两次就能到达。</p>
+    </div>
+    <div class="advantage-item">
+      <h3>社区氛围不重</h3>
+      <p>与很多同类站点不同，它没有强推社交或评论区，更接近一个信息台——对只想安静看数据的人来说是优点。</p>
+    </div>
+  </div>
+
+  <!-- 说明区：场景和状态说明 -->
+  <div class="section-sub">使用场景举例</div>
+  <p>
+    假设你在查今晚的篮球对阵，<a href="https://index-3377sports.com">3377体育</a> 会把同一联赛的多场比赛并列展示，平均得分、近期状态、交锋记录都集中在一个模块下，不用来回切换页面。如果你更关注足球，同样是类似的逻辑，只是数据维度换成了控球率、射门转化等。不过有一点要提：部分深度统计可能只在桌面端完整显示，移动端建议横屏查看。
+  </p>
+  <p>
+    另外，平台偶尔会进行维护（通常在后半夜），如果遇到无法访问的情况，等一两个小时通常就能恢复。官方没有公开的维护日历，所以临时打不开不必紧张。
+  </p>
+
+  <!-- FAQ 摘要：三组常见问题 -->
+  <div class="faq-summary">
+    <div class="section-title">FAQ 摘要</div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 首次访问需要注册吗？</div>
+      <div class="faq-a">浏览公开数据和赛事信息不需要注册。只有部分个性化功能（如收藏球队、设置提醒）才要求登录账号。注册流程很简单，但建议用常用邮箱以免遗漏验证邮件。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 移动端适配怎么样？</div>
+      <div class="faq-a">大部分页面做了响应式，比分和赛程在手机上可正常阅读。但个别筛选控件在窄屏上会折叠，需要多点一次展开。整体来说不影响核心浏览。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 看到的数据是实时更新的吗？</div>
+      <div class="faq-a">主流赛事（NBA、英超、西甲等）通常是实时或准实时更新，延迟控制在1分钟以内。一些小众联赛可能每5–10分钟刷新一次，以官方数据源为准。</div>
+    </div>
+  </div>
+
+  <!-- 底部链接区：自然嵌入链接，不用 “进入、点击” 等词 -->
+  <div class="footer-links">
+    <span>📎 直达：<a href="https://index-3377sports.com">3377体育</a></span>
+    <span>也可从收藏夹或书签栏访问</span>
+    <span>建议使用 Chrome / Edge 最新版本</span>
+  </div>
+
+  <hr>
+  <div class="footnote">
+    本文档仅作信息整理 · 页面内容基于公开体验 · 更新于最近一次访问
+  </div>
+</div>
+</body>
+</html>
